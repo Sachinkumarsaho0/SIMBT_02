@@ -1,0 +1,53 @@
+
+*{
+    background-color: rgb(125, 65, 58);
+}
+#do{
+    color: aliceblue;
+}
+ h1{  
+    margin-left: 35%;
+    /* background-color: rgb(241, 243, 243); */
+    width: 30%;
+    font-size: 50px;
+}
+.row{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    background-color: rgb(7, 7, 7);
+    border-radius: 30px;
+    margin-left: 20px;
+    margin-bottom: 25px;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: rgb(236, 229, 229);
+    padding: 10px;
+    font-weight: 14px;
+    border-radius: 50px;
+    width: 72%;
+    font-size: 40px;
+}
+button{
+    border: none;
+    outline: none;
+    background-color: rgb(14, 14, 14);
+    border-radius: 50px;
+    color: rgb(255, 253, 253);
+    width: 15%;
+    height: 200%;
+    font-size: 20px;
+
+
+}
+
+
+
+ul li span{
+    position: absolute;
+    padding-left: 10%;
+    }
+

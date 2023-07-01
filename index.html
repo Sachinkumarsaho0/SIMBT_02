@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Todo-List</title>
+  </head>
+  <body>
+    <div id="box">
+        <h1> &nbsp  TO<span id="do">DO</span>-LIST <h1>
+      <div id="row">
+        <input type="text" id= "input-box" />
+        <button onclick="addTask()">Add</button>
+        <ul id="list-container">
+            <!-- <li>Task 1</li>
+            <li>Task 2</li>
+            <li>Task 3</li>
+        </ul> -->
+      </div>
+    </div>
+  </body>
+  <script>
+    const inputBox = document.getElementById("input-box");
+const listContainer = document.getElementById("list-container");
+
+function addTask() {
+ {
+    let li = document.createElement("li");
+    li.innerHTML = inputBox.value;
+    listContainer.appendChild(li);
+    let span=document.createElement("span")
+    span.innerHTML="\u00d7"
+    li.appendChild(span)
+  }
+  inputBox.value = "";
+  saveData()
+}
+listContainer.addEventListener("click",function(e){
+    if(e.target.tagName=== "SPAN")
+    e.target.parentElement.remove()
+},false)
+function saveData(){
+    localStorage.setItem("data",listContainer.innerHTML)
+}
+function showTasks(){
+    listContainer.innerHTML=localStorage.getItem("data")
+}
+showTasks()
+
+  </script>
+</html>
